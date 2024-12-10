@@ -27,3 +27,5 @@ Data Deletion: Prior to any new data load, all existing data in the staging laye
 Data Load: New data is loaded into the staging layer after the cleanup process.
 Presentation Layer Operations
 Data Append: Data from the staging layer is appended to the presentation layer table. This step ensures that the presentation layer remains up-to-date with the latest processed data.
+
+![image](https://github.com/user-attachments/assets/76b5ea82-0940-4bfc-8ab3-c83ebb4fe1f1)
