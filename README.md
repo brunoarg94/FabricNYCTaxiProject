@@ -29,3 +29,8 @@ Presentation Layer Operations
 Data Append: Data from the staging layer is appended to the presentation layer table. This step ensures that the presentation layer remains up-to-date with the latest processed data.
 
 ![image](https://github.com/user-attachments/assets/76b5ea82-0940-4bfc-8ab3-c83ebb4fe1f1)
+
+
+Dynamic workflow to upload monthly data
+![image](https://github.com/user-attachments/assets/0638ca8e-cb58-4e93-b953-bf4e2b6c7e4a)
+
