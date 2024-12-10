@@ -1,6 +1,9 @@
 # FabricNYCTaxiProject
 This repository was created to share some personal projects that make up my portfolio as a Data Analyst and Analytics Engineer
 
+![Fabric Architecture Excalidraw](https://github.com/user-attachments/assets/43ade0d2-52cc-4fc3-a295-41e41d2d622a)
+
+
 End-to-End Data Analytics Project using Microsoft Fabric
 Overview
 This document provides a step-by-step guide to implementing an End-to-End Data Analytics solution using Microsoft Fabric. It is tailored for Data Analysts and BI/Data Engineers to streamline the data analytics process while leveraging Microsoft Fabric's capabilities.
