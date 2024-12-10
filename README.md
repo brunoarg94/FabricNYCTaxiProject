@@ -1,4 +1,4 @@
-# FabricNYCTaxiProject
+# Microsoft Fabric NYC Taxi Data Project
 This repository was created to share some personal projects that make up my portfolio as a Data Analyst and Analytics Engineer
 
 ![Fabric Architecture Excalidraw](https://github.com/user-attachments/assets/43ade0d2-52cc-4fc3-a295-41e41d2d622a)
