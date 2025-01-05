@@ -1,71 +1,94 @@
 # Microsoft Fabric NYC Taxi Data Project
 
-1. Project Architecture
-The image below illustrates the overall architecture of the NYC Taxi Data Project. This architecture outlines the key components and the data flow, from collection to visualization.
+## Overview
+
+The **NYC Taxi Data Project** is an end-to-end data analytics solution leveraging Microsoft Fabric to monitor and analyze taxi rides in New York City. This project captures, processes, and visualizes key metrics, offering actionable insights into passenger behavior, trip details, and operational performance.
+
+---
+
+## 1. Project Architecture
+
+The image below illustrates the architecture of the NYC Taxi Data Project, detailing the data flow from collection to visualization.
 
 ![Fabric Architecture Excalidraw](https://github.com/user-attachments/assets/43ade0d2-52cc-4fc3-a295-41e41d2d622a)
 
+### Key Components:
 
-End-to-End Data Analytics Project using Microsoft Fabric
+- **Fabric Data Pipeline**: Orchestrates data ingestion, transformation, and loading into the Fabric Lakehouse.
+- **Fabric Lakehouse**: Central repository for raw data and files.
+- **Power BI**: Connects to the Lakehouse via Direct Lake to enable near real-time dashboards.
 
-- Fabric Data Pipeline: Manages orchestration as well as the ingestion, transformation, and loading of data into a Fabric Lakehouse.
-- Fabric Lakehouse: Serves as a storage repository for raw data and files.
-- Power BI: Connects to the Lakehouse using Direct Lake to create a near real-time dashboard.
+---
 
-2. General Project Description
-This dashboard is a data monitoring and analytics solution designed to provide a high-level summary of taxi rides in NYC within a specific date range. It captures, transforms, and presents key metrics to offer actionable insights into passenger behavior, trip details, and operational performance. The dashboard enables stakeholders to understand ride patterns, detect potential issues, and optimize the user experience.
+## 2. General Project Description
 
-3. ETL Process (Data Pipelines) phases
+This solution provides a comprehensive dashboard to analyze taxi rides in NYC for a specific date range. The dashboard empowers stakeholders by:
 
-Metadata Management
-A metadata table named processing_log is created to store information about the data processed, ensuring traceability and accountability for every load cycle.
+- Monitoring ride patterns and passenger behaviors.
+- Identifying operational bottlenecks.
+- Supporting data-driven decision-making.
 
-Staging Layer Operations
-Data Deletion: Prior to any new data load, all existing data in the staging layer is cleared to avoid duplication or inconsistencies.
+---
 
-Data Load
-New data is loaded into the staging layer after the cleanup process.
+## 3. ETL Process (Data Pipelines)
 
-Presentation Layer Operations
-Data Append: Data from the staging layer is appended to the presentation layer table. This step ensures that the presentation layer remains up-to-date with the latest processed data.
+### **Metadata Management**
+A metadata table, `processing_log`, ensures traceability and accountability for all load cycles.
 
-Data Dictionary
-Target table `nyctaxi_yellow` data dictionary (Presentation Layer) detailing the structure and meaning of each field in the dataset.
+### **Staging Layer Operations**
+- **Data Deletion**: Clears the staging layer before each new data load to avoid duplication or inconsistencies.
+- **Data Load**: Loads new data into the staging layer.
 
-| **Field Name**          | **Description**                                                                  | **Data Type**         | **Example Value**                |
-|-------------------------|----------------------------------------------------------------------------------|-----------------------|----------------------------------|
-| `do_borough`            | Borough where the drop-off occurred.                                             | Text/String           | "Manhattan"                      |
-| `do_zone`               | Specific zone within the borough for drop-off.                                   | Text/String           | "Upper West Side"                |
-| `passenger_count`       | Number of passengers in the taxi during the ride.                                | Numeric (Integer)     | 2                                |
-| `payment_method`        | Method of payment used for the ride (e.g., cash, credit card).                   | Text/String           | "Credit Card"                    |
-| `pu_borough`            | Borough where the pickup occurred.                                               | Text/String           | "Brooklyn"                       |
-| `pu_zone`               | Specific zone within the borough for pickup.                                     | Text/String           | "Downtown Brooklyn"              |
-| `total_rides`           | Total count of rides (aggregated metric).                                        | Numeric (Integer)     | 13,000,000                       |
-| `total_amount`          | Total fare amount collected for the ride, including tips and fees.               | Numeric (Decimal)     | 53.25                            |
-| `tpep_dropoff_datetime` | Date and time when the ride ended.                                               | DateTime              | "2024-01-01 15:30:00"            |
-| `tpep_pickup_datetime`  | Date and time when the ride started.                                             | DateTime              | "2024-01-01 15:00:00"            |
-| `trip_distance`         | Total distance traveled during the ride (e.g., in miles or kilometers).          | Numeric (Decimal)     | 5.2                              |
-| `vendor`                | Name of the vendor providing the service (e.g., taxi company).                   | Text/String           | "Creative Mobile Technologies"   |
+### **Presentation Layer Operations**
+- **Data Append**: Consolidates staging data into the presentation layer to maintain up-to-date insights.
 
-4. Data Visualization (Power BI)
-Tool: Power BI
-Purpose: Create interactive dashboards for visualizing:
+---
 
-- Number of trips by passenger.
-- Most common payment methods.
-- Vendors with the highest volume of rides.
-- Trends in trip distance, passenger count, and revenue over time.
+## 4. Data Dictionary
 
-Import mode: Direct Lake
-https://learn.microsoft.com/en-us/fabric/get-started/direct-lake-overview
+The table below describes the fields in the `nyctaxi_yellow` dataset within the presentation layer:
 
-5. Project Benefits
+| **Field Name**          | **Description**                                                     | **Data Type**         | **Example Value**                |
+|-------------------------|---------------------------------------------------------------------|-----------------------|----------------------------------|
+| `do_borough`            | Borough where the drop-off occurred.                                | Text/String           | "Manhattan"                      |
+| `do_zone`               | Specific zone within the borough for drop-off.                      | Text/String           | "Upper West Side"                |
+| `passenger_count`       | Number of passengers in the taxi during the ride.                   | Numeric (Integer)     | 2                                |
+| `payment_method`        | Payment method used (e.g., cash, credit card).                      | Text/String           | "Credit Card"                    |
+| `pu_borough`            | Borough where the pickup occurred.                                  | Text/String           | "Brooklyn"                       |
+| `pu_zone`               | Specific zone within the borough for pickup.                        | Text/String           | "Downtown Brooklyn"              |
+| `total_rides`           | Aggregated metric of total rides.                                   | Numeric (Integer)     | 13,000,000                       |
+| `total_amount`          | Total fare amount (including tips and fees).                        | Numeric (Decimal)     | 53.25                            |
+| `tpep_dropoff_datetime` | Date and time when the ride ended.                                  | DateTime              | "2024-01-01 15:30:00"            |
+| `tpep_pickup_datetime`  | Date and time when the ride started.                                | DateTime              | "2024-01-01 15:00:00"            |
+| `trip_distance`         | Total distance traveled during the ride.                            | Numeric (Decimal)     | 5.2                              |
+| `vendor`                | Vendor providing the service (e.g., taxi company).                  | Text/String           | "Creative Mobile Technologies"   |
 
-- Near Real-Time Monitoring: Continuously updated data enables agile decision-making.
-- Operational Optimization: Insights can be used to enhance user experience and operational efficiency.
-- Flexibility and Scalability: The modular architecture supports future expansions and adjustments.
+---
 
-5. Final Considerations
-The NYC Taxi Data Project is a robust solution for capturing, transforming, and analyzing taxi ride data. By leveraging modern tools available in Microsoft Fabric, this project ensures efficiency and scalability, meeting the needs of transportation data monitoring and analysis.
+## 5. Data Visualization (Power BI)
 
+### Tool: **Power BI**
 
+#### **Key Features:**
+- **Interactive Dashboards**: Visualize trends in trip counts, revenue, and distance.
+- **Insights Provided**:
+  - Number of trips by passenger.
+  - Most common payment methods.
+  - Top vendors by ride volume.
+  - Trends in distance, passenger count, and revenue over time.
+
+#### **Import Mode**: [Direct Lake](https://learn.microsoft.com/en-us/fabric/get-started/direct-lake-overview)
+
+---
+
+## 6. Project Benefits
+
+- **Near Real-Time Monitoring**: Provides continuously updated data for agile decision-making.
+- **Operational Optimization**: Identifies areas to improve efficiency and user experience.
+- **Scalability**: Modular architecture supports future enhancements and expansions.
+
+---
+
+## 7. Final Considerations
+
+The **NYC Taxi Data Project** demonstrates the power of Microsoft Fabric in creating efficient, scalable, and impactful data solutions. This project streamlines the process of monitoring, analyzing, and presenting transportation data, providing critical insights to stakeholders.
