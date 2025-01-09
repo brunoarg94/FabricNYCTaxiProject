@@ -57,10 +57,10 @@ The table below describes the fields in the `nyctaxi_yellow` dataset within the 
 | `pu_borough`            | Borough where the pickup occurred.                                  | Text/String           | "Brooklyn"                       |
 | `pu_zone`               | Specific zone within the borough for pickup.                        | Text/String           | "Downtown Brooklyn"              |
 | `total_rides`           | Aggregated metric of total rides.                                   | Numeric (Integer)     | 13,000,000                       |
-| `total_amount`          | Total fare amount (including tips and fees).                        | Numeric (Decimal)     | 53.25                            |
+| `total_amount`          | Total fare amount (including tips and fees) in US dolar.            | Numeric (Decimal)     | 53.25                            |
 | `tpep_dropoff_datetime` | Date and time when the ride ended.                                  | DateTime              | "2024-01-01 15:30:00"            |
 | `tpep_pickup_datetime`  | Date and time when the ride started.                                | DateTime              | "2024-01-01 15:00:00"            |
-| `trip_distance`         | Total distance traveled during the ride.                            | Numeric (Decimal)     | 5.2                              |
+| `trip_distance`         | Total distance traveled during the ride in miles.                   | Numeric (Decimal)     | 5.2                              |
 | `vendor`                | Vendor providing the service (e.g., taxi company).                  | Text/String           | "Creative Mobile Technologies"   |
 
 ---
