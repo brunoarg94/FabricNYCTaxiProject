@@ -36,6 +36,9 @@ This solution provides a comprehensive dashboard to analyze taxi rides in NYC fo
 
 ## 3. ETL Process (Data Pipelines)
 
+![image](https://github.com/user-attachments/assets/56a22c53-2337-4b95-bc03-edd2f194f1ef)
+
+
 ![image](https://github.com/user-attachments/assets/39bee5de-47c9-4009-9130-2a3fc1cf6888)
 
 
