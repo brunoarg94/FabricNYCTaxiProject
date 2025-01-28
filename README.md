@@ -75,9 +75,8 @@ The table below describes the fields in the `nyctaxi_yellow` dataset within the 
   - Number of trips by passenger.
   - Most common payment methods.
   - Top vendors by ride volume.
-  - Trends in distance, passenger count, and revenue over time.
+  - Geospatial analysis.
 
-#### **Import Mode**: [Direct Lake](https://learn.microsoft.com/en-us/fabric/get-started/direct-lake-overview)
 
 ---
 
