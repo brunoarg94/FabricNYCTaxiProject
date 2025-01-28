@@ -4,7 +4,8 @@
 
 The **NYC Taxi Data Project** is an end-to-end data analytics solution leveraging Microsoft Fabric to monitor and analyze taxi rides in New York City. This project captures, processes, and visualizes key metrics, offering actionable insights into passenger behavior, trip details, and operational performance.
 
-![image](https://github.com/user-attachments/assets/462c02d0-4fe5-4974-a963-b924d85bfeea)
+![image](https://github.com/user-attachments/assets/69cf3753-b23d-4b4d-8ca9-9b80c041cb40)
+
 
 
 ---
@@ -77,21 +78,17 @@ The table below describes the fields in the `nyctaxi_yellow` dataset within the 
 ## 5. Data Visualization (Power BI)
 
 ### Tool: **Power BI**
+![image](https://github.com/user-attachments/assets/d4e48f3b-b946-420d-bb38-595c955b21f8)
 
 #### **Key Features:**
-- **Interactive Dashboards**: Visualize trends in trip counts, revenue, and distance.
-- **Insights Provided**:
-  - Number of trips by passenger.
-  - Most common payment methods.
-  - Top vendors by ride volume.
-  - Geospatial analysis.
-
+- Interactive Dashboard.
+- Geospatial analysis.
 
 ---
 
 ## 6. Project Benefits
 
-- **Near Real-Time Monitoring**: Provides continuously updated data for agile decision-making.
+- **Incremental Refresh**: Provides continuously updated data for agile decision-making.
 - **Operational Optimization**: Identifies areas to improve efficiency and user experience.
 - **Scalability**: Modular architecture supports future enhancements and expansions.
 
