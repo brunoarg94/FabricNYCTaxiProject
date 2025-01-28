@@ -35,6 +35,9 @@ This solution provides a comprehensive dashboard to analyze taxi rides in NYC fo
 
 ## 3. ETL Process (Data Pipelines)
 
+![image](https://github.com/user-attachments/assets/39bee5de-47c9-4009-9130-2a3fc1cf6888)
+
+
 ### **Metadata Management**
 A metadata table, `processing_log`, ensures traceability and accountability for all load cycles.
 
@@ -44,6 +47,9 @@ A metadata table, `processing_log`, ensures traceability and accountability for 
 
 ### **Presentation Layer Operations**
 - **Data Append**: Consolidates staging data into the presentation layer to maintain up-to-date insights.
+
+  ![image](https://github.com/user-attachments/assets/609dbf04-0aba-46bf-b73d-e0c45e7c6725)
+
 
 ---
 
