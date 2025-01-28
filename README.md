@@ -4,6 +4,9 @@
 
 The **NYC Taxi Data Project** is an end-to-end data analytics solution leveraging Microsoft Fabric to monitor and analyze taxi rides in New York City. This project captures, processes, and visualizes key metrics, offering actionable insights into passenger behavior, trip details, and operational performance.
 
+![image](https://github.com/user-attachments/assets/462c02d0-4fe5-4974-a963-b924d85bfeea)
+
+
 ---
 
 ## 1. Project Architecture
